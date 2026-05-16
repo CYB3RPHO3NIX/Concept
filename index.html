@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Concept UI Showcase</title>
+    <meta
+      name="description"
+      content="A static gallery of reusable UI controls, widgets, and layout ideas."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="hero">
+        <nav class="topbar">
+          <div>
+            <p class="eyebrow">Reusable idea board</p>
+            <h1>Concept UI Showcase</h1>
+          </div>
+          <button class="ghost-button" id="themeToggle" type="button" aria-label="Toggle theme">
+            Toggle theme
+          </button>
+        </nav>
+
+        <div class="hero-grid">
+          <section class="hero-copy card">
+            <span class="badge success">Static HTML + CSS + JS</span>
+            <h2>Preview common controls, layouts, and interactions in one place.</h2>
+            <p>
+              This page is designed to spark ideas for web interfaces. It focuses on the visual
+              concept instead of framework-specific implementation.
+            </p>
+            <div class="hero-actions">
+              <a class="primary-button" href="#controls">Explore controls</a>
+              <button class="secondary-button" id="openModal" type="button">Open concept modal</button>
+            </div>
+            <div class="stats-grid">
+              <article>
+                <strong>20+</strong>
+                <span>UI patterns</span>
+              </article>
+              <article>
+                <strong>3</strong>
+                <span>Technologies</span>
+              </article>
+              <article>
+                <strong>100%</strong>
+                <span>Static</span>
+              </article>
+            </div>
+          </section>
+
+          <aside class="card preview-panel">
+            <div class="window-dots" aria-hidden="true">
+              <span></span><span></span><span></span>
+            </div>
+            <div class="mini-dashboard">
+              <div class="mini-card accent">
+                <span>Revenue</span>
+                <strong>$48.2K</strong>
+              </div>
+              <div class="mini-card">
+                <span>Tasks done</span>
+                <strong>84%</strong>
+              </div>
+              <div class="mini-chart">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </header>
+
+      <main>
+        <section class="section" id="controls">
+          <div class="section-heading">
+            <p class="eyebrow">Controls</p>
+            <h2>Buttons, inputs, selectors, and feedback states</h2>
+          </div>
+          <div class="grid two-column">
+            <article class="card">
+              <h3>Buttons & chips</h3>
+              <div class="button-row">
+                <button class="primary-button" type="button">Primary</button>
+                <button class="secondary-button" type="button">Secondary</button>
+                <button class="ghost-button" type="button">Ghost</button>
+              </div>
+              <div class="chip-row">
+                <span class="chip active">Design</span>
+                <span class="chip">Analytics</span>
+                <span class="chip">Marketing</span>
+                <span class="chip">Support</span>
+              </div>
+            </article>
+
+            <article class="card">
+              <h3>Form layout</h3>
+              <form class="form-grid">
+                <label>
+                  Search
+                  <input type="search" placeholder="Search anything" />
+                </label>
+                <label>
+                  Category
+                  <select>
+                    <option>Components</option>
+                    <option>Dashboards</option>
+                    <option>Marketing</option>
+                  </select>
+                </label>
+                <label>
+                  Message
+                  <textarea rows="4" placeholder="Write a note..."></textarea>
+                </label>
+                <label class="inline-option">
+                  <input type="checkbox" checked />
+                  Include animations
+                </label>
+                <label class="inline-option">
+                  <input type="radio" name="mode" checked />
+                  Grid view
+                </label>
+                <label class="inline-option">
+                  <input type="radio" name="mode" />
+                  List view
+                </label>
+              </form>
+            </article>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="grid three-column">
+            <article class="card">
+              <h3>Alerts</h3>
+              <div class="stack">
+                <div class="alert info">Info: Draft saved successfully.</div>
+                <div class="alert success">Success: New theme published.</div>
+                <div class="alert warning">Warning: 2 fields still need review.</div>
+              </div>
+            </article>
+
+            <article class="card">
+              <h3>Progress</h3>
+              <div class="stack">
+                <div>
+                  <div class="progress-label">
+                    <span>Profile completion</span>
+                    <strong>72%</strong>
+                  </div>
+                  <div class="progress"><span style="width: 72%"></span></div>
+                </div>
+                <div>
+                  <div class="progress-label">
+                    <span>Campaign target</span>
+                    <strong>48%</strong>
+                  </div>
+                  <div class="progress"><span style="width: 48%"></span></div>
+                </div>
+              </div>
+            </article>
+
+            <article class="card">
+              <h3>Range & toggle</h3>
+              <div class="stack">
+                <label>
+                  Density
+                  <input id="densityRange" type="range" min="0" max="100" value="56" />
+                </label>
+                <div class="range-output">
+                  <span>Compact</span>
+                  <strong id="densityValue">56%</strong>
+                </div>
+                <label class="toggle">
+                  <input type="checkbox" checked />
+                  <span></span>
+                  Enable live previews
+                </label>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-heading">
+            <p class="eyebrow">Patterns</p>
+            <h2>Layouts and content organization ideas</h2>
+          </div>
+          <div class="grid two-column">
+            <article class="card">
+              <div class="tabs" role="tablist" aria-label="Concept tabs">
+                <button class="tab active" type="button" data-tab-target="dashboard">Dashboard</button>
+                <button class="tab" type="button" data-tab-target="commerce">Commerce</button>
+                <button class="tab" type="button" data-tab-target="education">Education</button>
+              </div>
+              <div class="tab-panels">
+                <div class="tab-panel active" id="dashboard">
+                  <h3>Dashboard concept</h3>
+                  <p>Use cards, activity feeds, and summary metrics to create quick-glance reporting.</p>
+                </div>
+                <div class="tab-panel" id="commerce">
+                  <h3>Commerce concept</h3>
+                  <p>Blend filters, product cards, price callouts, and trust indicators in the same view.</p>
+                </div>
+                <div class="tab-panel" id="education">
+                  <h3>Education concept</h3>
+                  <p>Feature modules, progress tracking, badges, and discussion components.</p>
+                </div>
+              </div>
+            </article>
+
+            <article class="card">
+              <h3>Accordion / FAQ</h3>
+              <div class="accordion">
+                <button class="accordion-item active" type="button">
+                  <span>Why use a concept gallery?</span>
+                  <strong>−</strong>
+                </button>
+                <div class="accordion-panel open">
+                  It helps designers, developers, and stakeholders quickly align on what a page could
+                  include before implementation details are discussed.
+                </div>
+                <button class="accordion-item" type="button">
+                  <span>What should be included?</span>
+                  <strong>+</strong>
+                </button>
+                <div class="accordion-panel">
+                  Focus on controls, cards, navigation, status messaging, and the kinds of content that
+                  matter for your product.
+                </div>
+                <button class="accordion-item" type="button">
+                  <span>Can this be reused?</span>
+                  <strong>+</strong>
+                </button>
+                <div class="accordion-panel">
+                  Yes. This page is intentionally framework-free so the visual ideas can be adapted to any stack.
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="grid three-column">
+            <article class="card feature-card">
+              <span class="badge neutral">Card</span>
+              <h3>Feature highlights</h3>
+              <p>Showcase a service or product capability with a bold heading and concise supporting copy.</p>
+            </article>
+
+            <article class="card pricing-card">
+              <span class="badge success">Pricing</span>
+              <h3>Starter plan</h3>
+              <p class="price">$19<span>/month</span></p>
+              <ul>
+                <li>Unlimited concepts</li>
+                <li>Shareable previews</li>
+                <li>Email support</li>
+              </ul>
+              <button class="primary-button" type="button">Choose plan</button>
+            </article>
+
+            <article class="card">
+              <h3>Data table</h3>
+              <div class="table-wrap">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Name</th>
+                      <th>Status</th>
+                      <th>Owner</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Landing page</td>
+                      <td><span class="pill success">Live</span></td>
+                      <td>Ana</td>
+                    </tr>
+                    <tr>
+                      <td>Mobile app</td>
+                      <td><span class="pill warning">Review</span></td>
+                      <td>Ken</td>
+                    </tr>
+                    <tr>
+                      <td>Admin panel</td>
+                      <td><span class="pill info">Draft</span></td>
+                      <td>Mia</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="grid two-column">
+            <article class="card">
+              <h3>Timeline</h3>
+              <div class="timeline">
+                <div class="timeline-item">
+                  <span></span>
+                  <div>
+                    <strong>Wireframe approved</strong>
+                    <p>Outline the major content areas and calls to action.</p>
+                  </div>
+                </div>
+                <div class="timeline-item">
+                  <span></span>
+                  <div>
+                    <strong>Concept gallery curated</strong>
+                    <p>Collect visual references for components and page sections.</p>
+                  </div>
+                </div>
+                <div class="timeline-item">
+                  <span></span>
+                  <div>
+                    <strong>Prototype shared</strong>
+                    <p>Review the concepts with stakeholders and shortlist favorites.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="card">
+              <h3>Quick actions</h3>
+              <div class="action-grid">
+                <button class="action-tile" type="button">Create card</button>
+                <button class="action-tile" type="button">Open dashboard</button>
+                <button class="action-tile" type="button">Invite team</button>
+                <button class="action-tile" id="showToast" type="button">Show toast</button>
+              </div>
+            </article>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <div class="modal-backdrop" id="modalBackdrop" hidden>
+      <div class="modal card" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+        <div class="modal-header">
+          <h2 id="modalTitle">Concept modal</h2>
+          <button class="ghost-button" id="closeModal" type="button">Close</button>
+        </div>
+        <p>
+          Use a modal for confirmations, detail views, onboarding tips, or compact forms that should
+          temporarily take focus.
+        </p>
+      </div>
+    </div>
+
+    <div class="toast" id="toast" role="status" aria-live="polite">Preview toast notification</div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
