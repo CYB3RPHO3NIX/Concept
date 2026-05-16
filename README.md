@@ -10,4 +10,4 @@ Static UI concept showcase built with HTML, CSS, and JavaScript only.
 
 ## GitHub Pages
 
-The repository includes a GitHub Pages workflow at `.github/workflows/deploy-pages.yml` to publish the site.
+GitHub Pages is configured to publish directly from the `main` branch, so the site is served from the repository root without an Actions deployment workflow.
